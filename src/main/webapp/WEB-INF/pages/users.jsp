@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Spring MVC Application</title>
+        <title>Spring MVC Application David </title>
 
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,12 @@
                     <form:input path="lastName" class="form-control" placeholder="Last Name"/>
                 </div>
                 <div class="form-group">
-                    <form:label path="email">Email:</form:label>
-                    <form:input path="email" class="form-control" placeholder="Email"/>
+                <form:label path="email">Email:</form:label>
+                <form:input path="email" class="form-control" placeholder="Email"/>
+            </div>
+                <div class="form-group">
+                    <form:label path="city">Email:</form:label>
+                    <form:input path="city" class="form-control" placeholder="City"/>
                 </div>
                 <button type="submit" class="btn btn-default">Add User</button>
             </form:form>
@@ -41,6 +45,7 @@
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>City</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -49,6 +54,7 @@
                             <tr>
                                 <td>${user.lastName}, ${user.firstName}</td>
                                 <td>${user.email}</td>
+                                <td>${user.city}</td>
                                 <td>
                                     <form:form action="delete/${user.id}" method="post"><input type="submit"
                                                                                                class="btn btn-danger btn-mini"
